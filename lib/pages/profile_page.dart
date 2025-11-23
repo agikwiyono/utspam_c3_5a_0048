@@ -16,10 +16,7 @@ class ProfilePage extends StatelessWidget {
         elevation: 0,
         title: const Text(
           'Profile',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,
       ),
@@ -58,10 +55,7 @@ class ProfilePage extends StatelessWidget {
               Text(
                 user.email,
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey[600],
-                ),
+                style: TextStyle(fontSize: 14, color: Colors.grey[600]),
               ),
               const SizedBox(height: 40),
               const Text(
@@ -117,7 +111,9 @@ class ProfilePage extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            Navigator.of(context).popUntil((route) => route.isFirst);
+                            Navigator.of(
+                              context,
+                            ).popUntil((route) => route.isFirst);
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -178,11 +174,7 @@ class ProfilePage extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(
-            icon,
-            color: const Color(0xFFba1e43),
-            size: 24,
-          ),
+          Icon(icon, color: const Color(0xFFba1e43), size: 24),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -190,10 +182,7 @@ class ProfilePage extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                 ),
                 const SizedBox(height: 4),
                 Text(
