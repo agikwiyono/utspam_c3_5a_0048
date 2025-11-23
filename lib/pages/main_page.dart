@@ -46,9 +46,7 @@ class _MainPageState extends State<MainPage> {
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           color: Colors.white,
-          border: Border(
-            top: BorderSide(color: Colors.grey[200]!, width: 1),
-          ),
+          border: Border(top: BorderSide(color: Colors.grey[200]!, width: 1)),
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -214,21 +212,16 @@ class _MainPageState extends State<MainPage> {
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             sliver: SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  final car = _filteredCars[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: _buildCarCard(car),
-                  );
-                },
-                childCount: _filteredCars.length,
-              ),
+              delegate: SliverChildBuilderDelegate((context, index) {
+                final car = _filteredCars[index];
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: _buildCarCard(car),
+                );
+              }, childCount: _filteredCars.length),
             ),
           ),
-          const SliverToBoxAdapter(
-            child: SizedBox(height: 16),
-          ),
+          const SliverToBoxAdapter(child: SizedBox(height: 16)),
         ],
       ),
     );
@@ -243,10 +236,7 @@ class _MainPageState extends State<MainPage> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => RentalFormPage(
-                car: car,
-                user: widget.user,
-              ),
+              builder: (context) => RentalFormPage(car: car, user: widget.user),
             ),
           );
         },
@@ -325,11 +315,7 @@ class _MainPageState extends State<MainPage> {
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(
-                          Icons.business,
-                          size: 16,
-                          color: Colors.grey[600],
-                        ),
+                        Icon(Icons.business, size: 16, color: Colors.grey[600]),
                         const SizedBox(width: 4),
                         Text(
                           car.brand,
@@ -369,10 +355,8 @@ class _MainPageState extends State<MainPage> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => RentalFormPage(
-                                  car: car,
-                                  user: widget.user,
-                                ),
+                                builder: (context) =>
+                                    RentalFormPage(car: car, user: widget.user),
                               ),
                             );
                           },
@@ -390,9 +374,7 @@ class _MainPageState extends State<MainPage> {
                           ),
                           child: const Text(
                             'Rent Now',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                            ),
+                            style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
