@@ -51,9 +51,7 @@ class _LoginPageState extends State<LoginPage> {
       if (user != null) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(
-            builder: (context) => MainPage(user: user),
-          ),
+          MaterialPageRoute(builder: (context) => MainPage(user: user)),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -114,10 +112,7 @@ class _LoginPageState extends State<LoginPage> {
                   Text(
                     'Your trusted car rental partner',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 60),
                   TextFormField(
@@ -130,9 +125,13 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.person_outline, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.person_outline,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
-                    validator: (value) => _validateRequired(value, 'Username or NIK'),
+                    validator: (value) =>
+                        _validateRequired(value, 'Username or NIK'),
                   ),
                   const SizedBox(height: 16),
                   TextFormField(
@@ -146,10 +145,15 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.lock_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.lock_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _isPasswordVisible ? Icons.visibility_off : Icons.visibility,
+                          _isPasswordVisible
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                           color: Colors.grey[600],
                         ),
                         onPressed: () {
