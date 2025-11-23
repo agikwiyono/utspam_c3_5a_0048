@@ -42,16 +42,11 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
       builder: (context) => AlertDialog(
         title: const Text('Cancel Rental'),
         content: const Text('Are you sure you want to cancel this rental?'),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: Text(
-              'No',
-              style: TextStyle(color: Colors.grey[600]),
-            ),
+            child: Text('No', style: TextStyle(color: Colors.grey[600])),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),
@@ -117,10 +112,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
         ),
         title: const Text(
           'Rental Details',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -171,7 +163,9 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                           vertical: 8,
                         ),
                         decoration: BoxDecoration(
-                          color: _getStatusColor(_rental.status).withOpacity(0.1),
+                          color: _getStatusColor(
+                            _rental.status,
+                          ).withOpacity(0.1),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
@@ -188,18 +182,11 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                   const SizedBox(height: 12),
                   Row(
                     children: [
-                      Icon(
-                        Icons.business,
-                        size: 18,
-                        color: Colors.grey[600],
-                      ),
+                      Icon(Icons.business, size: 18, color: Colors.grey[600]),
                       const SizedBox(width: 6),
                       Text(
                         '${_rental.carBrand} • ${_rental.carType}',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.grey[600],
-                        ),
+                        style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                       ),
                     ],
                   ),
@@ -308,7 +295,8 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                               final result = await Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => EditRentalPage(rental: _rental),
+                                  builder: (context) =>
+                                      EditRentalPage(rental: _rental),
                                 ),
                               );
 
@@ -357,11 +345,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
       ),
       child: Row(
         children: [
-          Icon(
-            icon,
-            color: const Color(0xFFba1e43),
-            size: 22,
-          ),
+          Icon(icon, color: const Color(0xFFba1e43), size: 22),
           const SizedBox(width: 16),
           Expanded(
             child: Column(
@@ -369,10 +353,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
               children: [
                 Text(
                   label,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                 ),
                 const SizedBox(height: 4),
                 Text(
