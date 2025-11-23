@@ -112,7 +112,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
         ),
         title: const Text(
           'Rental Details',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -221,7 +221,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                   _buildInfoRow(
                     Icons.payments_outlined,
                     'Price per Day',
-                    'Rp ${_rental.carPricePerDay.toStringAsFixed(0)}',
+                    'Rp${_rental.carPricePerDay.toStringAsFixed(0)}',
                   ),
                   const SizedBox(height: 24),
                   Container(
@@ -242,7 +242,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                           ),
                         ),
                         Text(
-                          'Rp ${_rental.totalCost.toStringAsFixed(0)}',
+                          'Rp${_rental.totalCost.toStringAsFixed(0)}',
                           style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,

@@ -273,7 +273,7 @@ class _HistoryPageState extends State<HistoryPage> {
                           style: TextStyle(fontSize: 14, color: Colors.white),
                         ),
                         Text(
-                          'Rp ${rental.totalCost.toStringAsFixed(0)}',
+                          'Rp${rental.totalCost.toStringAsFixed(0)}',
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,

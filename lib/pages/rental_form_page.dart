@@ -164,7 +164,7 @@ class _RentalFormPageState extends State<RentalFormPage> {
         ),
         title: const Text(
           'Rental Form',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -250,7 +250,7 @@ class _RentalFormPageState extends State<RentalFormPage> {
                               ),
                               const SizedBox(width: 12),
                               Text(
-                                'Rp ${widget.car.pricePerDay.toStringAsFixed(0)} / day',
+                                'Rp${widget.car.pricePerDay.toStringAsFixed(0)} / day',
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -362,7 +362,7 @@ class _RentalFormPageState extends State<RentalFormPage> {
                             ),
                           ),
                           Text(
-                            'Rp ${_calculateTotal().toStringAsFixed(0)}',
+                            'Rp${_calculateTotal().toStringAsFixed(0)}',
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
