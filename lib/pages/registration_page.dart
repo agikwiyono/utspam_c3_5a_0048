@@ -162,7 +162,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -200,7 +200,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Full Name',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -218,7 +218,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'NIK',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -237,7 +237,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Email',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -256,7 +256,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Phone Number',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -275,7 +275,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Address',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -294,7 +294,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Username',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -313,7 +313,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -373,7 +373,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     children: [
                       Text(
                         'Already have an account? ',
-                        style: TextStyle(color: Colors.grey[600]),
+                        style: TextStyle(color: Colors.grey[400]),
                       ),
                       TextButton(
                         onPressed: () {

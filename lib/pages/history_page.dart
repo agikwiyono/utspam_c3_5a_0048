@@ -60,13 +60,13 @@ class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF1e1e1e),
         elevation: 0,
         title: const Text(
           'Rental History',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,
       ),
@@ -83,7 +83,7 @@ class _HistoryPageState extends State<HistoryPage> {
                   const SizedBox(height: 16),
                   Text(
                     'No rental history yet',
-                    style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+                    style: TextStyle(fontSize: 18, color: Colors.grey[400]),
                   ),
                 ],
               ),
@@ -111,7 +111,7 @@ class _HistoryPageState extends State<HistoryPage> {
     final formattedDate = DateFormat('dd MMM yyyy').format(startDate);
 
     return Material(
-      color: Colors.white,
+      color: const Color(0xFF1e1e1e),
       borderRadius: BorderRadius.circular(16),
       child: InkWell(
         onTap: () async {
@@ -129,7 +129,7 @@ class _HistoryPageState extends State<HistoryPage> {
         borderRadius: BorderRadius.circular(16),
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey[200]!),
+            border: Border.all(color: Colors.grey[800]!),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
@@ -143,7 +143,7 @@ class _HistoryPageState extends State<HistoryPage> {
                 child: Container(
                   height: 150,
                   width: double.infinity,
-                  color: Colors.grey[200],
+                  color: Colors.grey[850],
                   child: Image.network(
                     rental.carImageUrl,
                     fit: BoxFit.cover,
@@ -173,7 +173,7 @@ class _HistoryPageState extends State<HistoryPage> {
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black87,
+                              color: Colors.white,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -219,7 +219,7 @@ class _HistoryPageState extends State<HistoryPage> {
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
-                        color: Colors.grey[100],
+                        color: const Color(0xFF2a2a2a),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Column(
@@ -229,7 +229,7 @@ class _HistoryPageState extends State<HistoryPage> {
                               Icon(
                                 Icons.person_outline,
                                 size: 16,
-                                color: Colors.grey[700],
+                                color: Colors.grey[400],
                               ),
                               const SizedBox(width: 8),
                               Expanded(
@@ -237,7 +237,7 @@ class _HistoryPageState extends State<HistoryPage> {
                                   rental.renterName,
                                   style: TextStyle(
                                     fontSize: 13,
-                                    color: Colors.grey[700],
+                                    color: Colors.grey[300],
                                   ),
                                 ),
                               ),
@@ -249,14 +249,14 @@ class _HistoryPageState extends State<HistoryPage> {
                               Icon(
                                 Icons.event,
                                 size: 16,
-                                color: Colors.grey[700],
+                                color: Colors.grey[400],
                               ),
                               const SizedBox(width: 8),
                               Text(
                                 '$formattedDate • ${rental.rentalDays} days',
                                 style: TextStyle(
                                   fontSize: 13,
-                                  color: Colors.grey[700],
+                                  color: Colors.grey[300],
                                 ),
                               ),
                             ],
@@ -270,7 +270,7 @@ class _HistoryPageState extends State<HistoryPage> {
                       children: [
                         const Text(
                           'Total Cost',
-                          style: TextStyle(fontSize: 14, color: Colors.black87),
+                          style: TextStyle(fontSize: 14, color: Colors.white),
                         ),
                         Text(
                           'Rp ${rental.totalCost.toStringAsFixed(0)}',

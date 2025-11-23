@@ -14,10 +14,13 @@ class MyApp extends StatelessWidget {
       title: 'CarRent',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFba1e43),
+        colorScheme: ColorScheme.dark(
           primary: const Color(0xFFba1e43),
+          secondary: const Color(0xFFba1e43),
+          surface: const Color(0xFF1a1a1a),
+          background: const Color(0xFF121212),
         ),
+        scaffoldBackgroundColor: const Color(0xFF121212),
         useMaterial3: true,
         fontFamily: 'Roboto',
       ),

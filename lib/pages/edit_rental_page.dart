@@ -152,17 +152,17 @@ class _EditRentalPageState extends State<EditRentalPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF1e1e1e),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black87),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context),
         ),
         title: const Text(
           'Edit Rental',
-          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -172,7 +172,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
             Container(
               margin: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey[200]!),
+                border: Border.all(color: Colors.grey[800]!),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
@@ -186,7 +186,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                     child: Container(
                       height: 200,
                       width: double.infinity,
-                      color: Colors.grey[200],
+                      color: Colors.grey[850],
                       child: Image.network(
                         widget.rental.carImageUrl,
                         fit: BoxFit.cover,
@@ -212,7 +212,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                           style: const TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black87,
+                            color: Colors.white,
                           ),
                         ),
                         const SizedBox(height: 8),
@@ -237,7 +237,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                         Container(
                           padding: const EdgeInsets.all(12),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFba1e43).withOpacity(0.1),
+                            color: const Color(0xFFba1e43).withOpacity(0.2),
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Row(
@@ -276,7 +276,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black87,
+                        color: Colors.white,
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -285,7 +285,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                       decoration: InputDecoration(
                         hintText: 'Renter Name',
                         filled: true,
-                        fillColor: Colors.grey[100],
+                        fillColor: const Color(0xFF1e1e1e),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
@@ -304,7 +304,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                       decoration: InputDecoration(
                         hintText: 'Rental Days',
                         filled: true,
-                        fillColor: Colors.grey[100],
+                        fillColor: const Color(0xFF1e1e1e),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
@@ -326,7 +326,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                       decoration: InputDecoration(
                         hintText: 'Start Date',
                         filled: true,
-                        fillColor: Colors.grey[100],
+                        fillColor: const Color(0xFF1e1e1e),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
@@ -345,7 +345,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                     Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
-                        color: Colors.grey[100],
+                        color: const Color(0xFF1e1e1e),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Row(
@@ -356,7 +356,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black87,
+                              color: Colors.white,
                             ),
                           ),
                           Text(

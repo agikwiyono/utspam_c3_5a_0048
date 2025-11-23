@@ -31,7 +31,7 @@ class ProfilePage extends StatelessWidget {
                   width: 100,
                   height: 100,
                   decoration: BoxDecoration(
-                    color: const Color(0xFFba1e43).withOpacity(0.1),
+                    color: const Color(0xFFba1e43).withOpacity(0.2),
                     borderRadius: BorderRadius.circular(50),
                   ),
                   child: const Icon(
@@ -48,7 +48,7 @@ class ProfilePage extends StatelessWidget {
                 style: const TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 8),
@@ -63,7 +63,7 @@ class ProfilePage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+                  color: Colors.white,
                 ),
               ),
               const SizedBox(height: 16),
@@ -169,7 +169,7 @@ class ProfilePage extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: const Color(0xFF1e1e1e),
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
@@ -190,7 +190,7 @@ class ProfilePage extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black87,
+                    color: Colors.white,
                   ),
                 ),
               ],

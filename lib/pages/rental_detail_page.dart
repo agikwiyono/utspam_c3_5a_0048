@@ -102,12 +102,12 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
     final formattedDate = DateFormat('dd MMMM yyyy').format(startDate);
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFF1e1e1e),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black87),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.pop(context, true),
         ),
         title: const Text(
@@ -123,7 +123,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
               child: Container(
                 height: 250,
                 width: double.infinity,
-                color: Colors.grey[200],
+                color: Colors.grey[850],
                 child: Image.network(
                   _rental.carImageUrl,
                   fit: BoxFit.cover,
@@ -153,7 +153,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                           style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black87,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -165,7 +165,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                         decoration: BoxDecoration(
                           color: _getStatusColor(
                             _rental.status,
-                          ).withOpacity(0.1),
+                          ).withOpacity(0.2),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
@@ -182,11 +182,11 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                   const SizedBox(height: 12),
                   Row(
                     children: [
-                      Icon(Icons.business, size: 18, color: Colors.grey[600]),
+                      Icon(Icons.business, size: 18, color: Colors.grey[400]),
                       const SizedBox(width: 6),
                       Text(
                         '${_rental.carBrand} • ${_rental.carType}',
-                        style: TextStyle(fontSize: 16, color: Colors.grey[600]),
+                        style: TextStyle(fontSize: 16, color: Colors.grey[400]),
                       ),
                     ],
                   ),
@@ -196,7 +196,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                      color: Colors.white,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -227,7 +227,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                   Container(
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFba1e43).withOpacity(0.1),
+                      color: const Color(0xFFba1e43).withOpacity(0.2),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Row(
@@ -238,7 +238,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.black87,
+                            color: Colors.white,
                           ),
                         ),
                         Text(
@@ -340,7 +340,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: const Color(0xFF1e1e1e),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -361,7 +361,7 @@ class _RentalDetailPageState extends State<RentalDetailPage> {
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black87,
+                    color: Colors.white,
                   ),
                 ),
               ],

@@ -41,12 +41,12 @@ class _MainPageState extends State<MainPage> {
     ];
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       body: pages[_currentIndex],
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border(top: BorderSide(color: Colors.grey[200]!, width: 1)),
+          color: const Color(0xFF1e1e1e),
+          border: Border(top: BorderSide(color: Colors.grey[800]!, width: 1)),
         ),
         child: BottomNavigationBar(
           currentIndex: _currentIndex,
@@ -55,7 +55,7 @@ class _MainPageState extends State<MainPage> {
               _currentIndex = index;
             });
           },
-          backgroundColor: Colors.white,
+          backgroundColor: const Color(0xFF1e1e1e),
           selectedItemColor: const Color(0xFFba1e43),
           unselectedItemColor: Colors.grey[400],
           type: BottomNavigationBarType.fixed,
@@ -98,7 +98,7 @@ class _MainPageState extends State<MainPage> {
                         width: 60,
                         height: 60,
                         decoration: BoxDecoration(
-                          color: const Color(0xFFba1e43).withOpacity(0.1),
+                          color: const Color(0xFFba1e43).withOpacity(0.2),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: const Icon(
@@ -116,7 +116,7 @@ class _MainPageState extends State<MainPage> {
                               'Welcome back,',
                               style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.grey[600],
+                                color: Colors.grey[400],
                               ),
                             ),
                             const SizedBox(height: 4),
@@ -125,7 +125,7 @@ class _MainPageState extends State<MainPage> {
                               style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.black87,
+                                color: Colors.white,
                               ),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
@@ -141,7 +141,7 @@ class _MainPageState extends State<MainPage> {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                      color: Colors.white,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -172,7 +172,7 @@ class _MainPageState extends State<MainPage> {
                                 decoration: BoxDecoration(
                                   color: isSelected
                                       ? const Color(0xFFba1e43)
-                                      : Colors.grey[100],
+                                      : const Color(0xFF1e1e1e),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
                                 child: Center(
@@ -181,7 +181,7 @@ class _MainPageState extends State<MainPage> {
                                     style: TextStyle(
                                       color: isSelected
                                           ? Colors.white
-                                          : Colors.grey[700],
+                                          : Colors.grey[400],
                                       fontWeight: isSelected
                                           ? FontWeight.bold
                                           : FontWeight.normal,
@@ -202,7 +202,7 @@ class _MainPageState extends State<MainPage> {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -229,7 +229,7 @@ class _MainPageState extends State<MainPage> {
 
   Widget _buildCarCard(CarModel car) {
     return Material(
-      color: Colors.white,
+      color: const Color(0xFF1e1e1e),
       borderRadius: BorderRadius.circular(16),
       child: InkWell(
         onTap: () {
@@ -243,7 +243,7 @@ class _MainPageState extends State<MainPage> {
         borderRadius: BorderRadius.circular(16),
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey[200]!),
+            border: Border.all(color: Colors.grey[800]!),
             borderRadius: BorderRadius.circular(16),
           ),
           child: Column(
@@ -257,7 +257,7 @@ class _MainPageState extends State<MainPage> {
                 child: Container(
                   height: 180,
                   width: double.infinity,
-                  color: Colors.grey[200],
+                  color: Colors.grey[850],
                   child: Image.network(
                     car.imageUrl,
                     fit: BoxFit.cover,
@@ -286,7 +286,7 @@ class _MainPageState extends State<MainPage> {
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black87,
+                              color: Colors.white,
                             ),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
@@ -298,7 +298,7 @@ class _MainPageState extends State<MainPage> {
                             vertical: 6,
                           ),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFba1e43).withOpacity(0.1),
+                            color: const Color(0xFFba1e43).withOpacity(0.2),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
@@ -321,7 +321,7 @@ class _MainPageState extends State<MainPage> {
                           car.brand,
                           style: TextStyle(
                             fontSize: 14,
-                            color: Colors.grey[600],
+                            color: Colors.grey[400],
                           ),
                         ),
                       ],

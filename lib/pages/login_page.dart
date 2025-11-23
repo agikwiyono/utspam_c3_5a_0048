@@ -81,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFF121212),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(height: 24),
                   const Text(
-                    'CarRent',
+                    'Agik Rental',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 40,
@@ -120,7 +120,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       hintText: 'Username or NIK',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -140,7 +140,7 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       filled: true,
-                      fillColor: Colors.grey[100],
+                      fillColor: const Color(0xFF1e1e1e),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
@@ -200,7 +200,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       Text(
                         'New user? ',
-                        style: TextStyle(color: Colors.grey[600]),
+                        style: TextStyle(color: Colors.grey[400]),
                       ),
                       TextButton(
                         onPressed: () {
