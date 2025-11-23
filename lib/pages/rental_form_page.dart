@@ -9,11 +9,7 @@ class RentalFormPage extends StatefulWidget {
   final CarModel car;
   final UserModel user;
 
-  const RentalFormPage({
-    super.key,
-    required this.car,
-    required this.user,
-  });
+  const RentalFormPage({super.key, required this.car, required this.user});
 
   @override
   State<RentalFormPage> createState() => _RentalFormPageState();
@@ -168,10 +164,7 @@ class _RentalFormPageState extends State<RentalFormPage> {
         ),
         title: const Text(
           'Rental Form',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -299,9 +292,13 @@ class _RentalFormPageState extends State<RentalFormPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.person_outline, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
-                      validator: (value) => _validateRequired(value, 'Renter name'),
+                      validator: (value) =>
+                          _validateRequired(value, 'Renter name'),
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
@@ -314,7 +311,10 @@ class _RentalFormPageState extends State<RentalFormPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.calendar_today_outlined, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.calendar_today_outlined,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
                       keyboardType: TextInputType.number,
                       validator: _validateRentalDays,
@@ -333,11 +333,15 @@ class _RentalFormPageState extends State<RentalFormPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.event_outlined, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.event_outlined,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
                       readOnly: true,
                       onTap: () => _selectDate(context),
-                      validator: (value) => _validateRequired(value, 'Start date'),
+                      validator: (value) =>
+                          _validateRequired(value, 'Start date'),
                     ),
                     const SizedBox(height: 24),
                     Container(
