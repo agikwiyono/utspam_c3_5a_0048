@@ -23,8 +23,12 @@ class _EditRentalPageState extends State<EditRentalPage> {
   @override
   void initState() {
     super.initState();
-    _renterNameController = TextEditingController(text: widget.rental.renterName);
-    _rentalDaysController = TextEditingController(text: widget.rental.rentalDays.toString());
+    _renterNameController = TextEditingController(
+      text: widget.rental.renterName,
+    );
+    _rentalDaysController = TextEditingController(
+      text: widget.rental.rentalDays.toString(),
+    );
     _selectedDate = DateTime.parse(widget.rental.startDate);
     _startDateController = TextEditingController(
       text: DateFormat('dd/MM/yyyy').format(_selectedDate!),
@@ -158,10 +162,7 @@ class _EditRentalPageState extends State<EditRentalPage> {
         ),
         title: const Text(
           'Edit Rental',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
       ),
       body: SingleChildScrollView(
@@ -289,9 +290,13 @@ class _EditRentalPageState extends State<EditRentalPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.person_outline, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
-                      validator: (value) => _validateRequired(value, 'Renter name'),
+                      validator: (value) =>
+                          _validateRequired(value, 'Renter name'),
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
@@ -304,7 +309,10 @@ class _EditRentalPageState extends State<EditRentalPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.calendar_today_outlined, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.calendar_today_outlined,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
                       keyboardType: TextInputType.number,
                       validator: _validateRentalDays,
@@ -323,11 +331,15 @@ class _EditRentalPageState extends State<EditRentalPage> {
                           borderRadius: BorderRadius.circular(12),
                           borderSide: BorderSide.none,
                         ),
-                        prefixIcon: const Icon(Icons.event_outlined, color: Color(0xFFba1e43)),
+                        prefixIcon: const Icon(
+                          Icons.event_outlined,
+                          color: Color(0xFFba1e43),
+                        ),
                       ),
                       readOnly: true,
                       onTap: () => _selectDate(context),
-                      validator: (value) => _validateRequired(value, 'Start date'),
+                      validator: (value) =>
+                          _validateRequired(value, 'Start date'),
                     ),
                     const SizedBox(height: 24),
                     Container(
