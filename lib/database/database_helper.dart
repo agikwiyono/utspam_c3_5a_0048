@@ -19,11 +19,7 @@ class DatabaseHelper {
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, filePath);
 
-    return await openDatabase(
-      path,
-      version: 1,
-      onCreate: _createDB,
-    );
+    return await openDatabase(path, version: 1, onCreate: _createDB);
   }
 
   Future _createDB(Database db, int version) async {
@@ -81,11 +77,7 @@ class DatabaseHelper {
 
   Future<UserModel?> getUserByNik(String nik) async {
     final db = await database;
-    final maps = await db.query(
-      'users',
-      where: 'nik = ?',
-      whereArgs: [nik],
-    );
+    final maps = await db.query('users', where: 'nik = ?', whereArgs: [nik]);
 
     if (maps.isNotEmpty) {
       return UserModel.fromMap(maps.first);
@@ -136,11 +128,7 @@ class DatabaseHelper {
 
   Future<int> deleteRental(int id) async {
     final db = await database;
-    return await db.delete(
-      'rentals',
-      where: 'id = ?',
-      whereArgs: [id],
-    );
+    return await db.delete('rentals', where: 'id = ?', whereArgs: [id]);
   }
 
   Future close() async {
