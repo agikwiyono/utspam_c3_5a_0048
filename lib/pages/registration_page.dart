@@ -101,8 +101,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
         return;
       }
 
-      final existingUserByNik = await DatabaseHelper.instance
-          .getUserByNik(_nikController.text);
+      final existingUserByNik = await DatabaseHelper.instance.getUserByNik(
+        _nikController.text,
+      );
       if (existingUserByNik != null) {
         if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
@@ -191,10 +192,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   Text(
                     'Register to start renting cars',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 40),
                   TextFormField(
@@ -207,7 +205,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.person_outline, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.person_outline,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     validator: (value) => _validateRequired(value, 'Full name'),
                   ),
@@ -222,7 +223,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.badge_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.badge_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     keyboardType: TextInputType.number,
                     validator: (value) => _validateRequired(value, 'NIK'),
@@ -238,7 +242,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.email_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.email_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     keyboardType: TextInputType.emailAddress,
                     validator: _validateEmail,
@@ -254,7 +261,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.phone_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.phone_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     keyboardType: TextInputType.phone,
                     validator: _validatePhone,
@@ -270,7 +280,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.home_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.home_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     maxLines: 2,
                     validator: (value) => _validateRequired(value, 'Address'),
@@ -286,7 +299,10 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.account_circle_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.account_circle_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                     ),
                     validator: (value) => _validateRequired(value, 'Username'),
                   ),
@@ -302,10 +318,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none,
                       ),
-                      prefixIcon: const Icon(Icons.lock_outlined, color: Color(0xFFba1e43)),
+                      prefixIcon: const Icon(
+                        Icons.lock_outlined,
+                        color: Color(0xFFba1e43),
+                      ),
                       suffixIcon: IconButton(
                         icon: Icon(
-                          _isPasswordVisible ? Icons.visibility_off : Icons.visibility,
+                          _isPasswordVisible
+                              ? Icons.visibility_off
+                              : Icons.visibility,
                           color: Colors.grey[600],
                         ),
                         onPressed: () {
