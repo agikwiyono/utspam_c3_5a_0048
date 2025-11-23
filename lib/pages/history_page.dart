@@ -30,7 +30,9 @@ class _HistoryPageState extends State<HistoryPage> {
     });
 
     try {
-      final rentals = await DatabaseHelper.instance.getRentalsByUserId(widget.user.id!);
+      final rentals = await DatabaseHelper.instance.getRentalsByUserId(
+        widget.user.id!,
+      );
       setState(() {
         _rentals = rentals;
         _isLoading = false;
@@ -64,55 +66,43 @@ class _HistoryPageState extends State<HistoryPage> {
         elevation: 0,
         title: const Text(
           'Rental History',
-          style: TextStyle(
-            color: Colors.black87,
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
         ),
         automaticallyImplyLeading: false,
       ),
       body: _isLoading
           ? const Center(
-              child: CircularProgressIndicator(
-                color: Color(0xFFba1e43),
-              ),
+              child: CircularProgressIndicator(color: Color(0xFFba1e43)),
             )
           : _rentals.isEmpty
-              ? Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.history,
-                        size: 80,
-                        color: Colors.grey[400],
-                      ),
-                      const SizedBox(height: 16),
-                      Text(
-                        'No rental history yet',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
+          ? Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.history, size: 80, color: Colors.grey[400]),
+                  const SizedBox(height: 16),
+                  Text(
+                    'No rental history yet',
+                    style: TextStyle(fontSize: 18, color: Colors.grey[600]),
                   ),
-                )
-              : RefreshIndicator(
-                  color: const Color(0xFFba1e43),
-                  onRefresh: _loadRentals,
-                  child: ListView.builder(
-                    padding: const EdgeInsets.all(24),
-                    itemCount: _rentals.length,
-                    itemBuilder: (context, index) {
-                      final rental = _rentals[index];
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 16),
-                        child: _buildRentalCard(rental),
-                      );
-                    },
-                  ),
-                ),
+                ],
+              ),
+            )
+          : RefreshIndicator(
+              color: const Color(0xFFba1e43),
+              onRefresh: _loadRentals,
+              child: ListView.builder(
+                padding: const EdgeInsets.all(24),
+                itemCount: _rentals.length,
+                itemBuilder: (context, index) {
+                  final rental = _rentals[index];
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: _buildRentalCard(rental),
+                  );
+                },
+              ),
+            ),
     );
   }
 
@@ -195,7 +185,9 @@ class _HistoryPageState extends State<HistoryPage> {
                             vertical: 6,
                           ),
                           decoration: BoxDecoration(
-                            color: _getStatusColor(rental.status).withOpacity(0.1),
+                            color: _getStatusColor(
+                              rental.status,
+                            ).withOpacity(0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
@@ -212,11 +204,7 @@ class _HistoryPageState extends State<HistoryPage> {
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(
-                          Icons.business,
-                          size: 14,
-                          color: Colors.grey[600],
-                        ),
+                        Icon(Icons.business, size: 14, color: Colors.grey[600]),
                         const SizedBox(width: 4),
                         Text(
                           '${rental.carBrand} • ${rental.carType}',
@@ -282,10 +270,7 @@ class _HistoryPageState extends State<HistoryPage> {
                       children: [
                         const Text(
                           'Total Cost',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black87,
-                          ),
+                          style: TextStyle(fontSize: 14, color: Colors.black87),
                         ),
                         Text(
                           'Rp ${rental.totalCost.toStringAsFixed(0)}',
